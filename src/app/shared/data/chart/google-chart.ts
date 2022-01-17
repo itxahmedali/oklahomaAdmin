@@ -1,4 +1,4 @@
-let primary_color = localStorage.getItem('primary_color') || '#7366ff';
+let primary_color = localStorage.getItem('primary_color') || '#bf983a';
 let secondary_color = localStorage.getItem('secondary_color') || '#f73164';
 
 // Pie Chart 1

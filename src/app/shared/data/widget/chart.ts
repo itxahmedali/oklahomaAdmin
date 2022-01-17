@@ -19,7 +19,7 @@ import {
 } from 'ng-apexcharts';
 
 let trigoStrength = 3;
-let primary = localStorage.getItem('primary_color') || '#7366ff';
+let primary = localStorage.getItem('primary_color') || '#bf983a';
 let secondary = localStorage.getItem('secondary_color') || '#f73164';
 
 export type ChartOptions = {

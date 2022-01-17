@@ -12,3 +12,31 @@
 label{
     margin-top: -10px;
 }
+.textareaSave{
+    position: relative;
+    i{
+        position: absolute;
+        top:15px;
+        right: 10px;
+    }
+}
+.textareaSave.d-flex{
+    i{
+        top:35px;
+    }
+}
+textarea{
+    width: 100%;
+    resize: none;
+    padding:10px 1rem;
+    background: none;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+}
+.fa.fa-save{
+    color:#757575;
+    cursor: pointer;
+}
+.btn.btn-primary{
+    width: 30%;
+}

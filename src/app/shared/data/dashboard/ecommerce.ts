@@ -1,4 +1,4 @@
-let primary = localStorage.getItem('primary_color') || '#7366ff';
+let primary = localStorage.getItem('primary_color') || '#bf983a';
 let secondary = localStorage.getItem('secondary_color') || '#f73164';
 
 export const todayTotalSale = {
@@ -61,7 +61,7 @@ export const todayTotalSale = {
             shade: 'light',
             type: 'horizontal',
             shadeIntensity: 1,
-            gradientToColors: ['#a26cf8', '#a927f9', '#7366ff'],
+            gradientToColors: ['#a26cf8', '#a927f9', '#bf983a'],
             opacityFrom: [1, 0.4, 0.25],
             opacityTo: [1, 0.4, 0.25],
             stops: [30, 100],
@@ -122,7 +122,7 @@ export const totalVisit = {
             fill: {
                 type: 'gradient',
                 gradient: {
-                    colorFrom: '#7366ff',
+                    colorFrom: '#bf983a',
                     colorTo: '#c481ec',
                     stops: [0, 100],
                     opacityFrom: 0.4,

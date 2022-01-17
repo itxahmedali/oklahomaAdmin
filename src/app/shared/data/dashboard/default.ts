@@ -1,7 +1,7 @@
 declare var require: any;
 let Knob = require('knob'); // browserify require
 
-let primary = localStorage.getItem('primary_color') || '#7366ff';
+let primary = localStorage.getItem('primary_color') || '#bf983a';
 let secondary = localStorage.getItem('secondary_color') || '#f73164';
 
 export const currentSales = {

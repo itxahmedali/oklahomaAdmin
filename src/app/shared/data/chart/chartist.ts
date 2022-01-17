@@ -5,7 +5,7 @@ var seq: number = 0;
 var delays: number = 80;
 var durations: number = 500;
 
-let primary_color = localStorage.getItem('primary_color') || '#7366ff';
+let primary_color = localStorage.getItem('primary_color') || '#bf983a';
 let secondary_color = localStorage.getItem('secondary_color') || '#f73164';
 
 export interface Chart {

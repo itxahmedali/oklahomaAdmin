@@ -1,0 +1,55 @@
+<app-breadcrumb [title]="'For Rent'" [items]="[]" [active_item]="'For Rent'"></app-breadcrumb>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <h5>Banner Section</h5>
+      <div class="banner-head d-flex flex-column">
+        <div class="textareaSave">
+          <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
+          <i class="fa fa-save"></i>
+        </div>
+      </div>
+      <div class="banner-sec mt-3 d-flex flex-column">
+        <img alt="" [src]="bannerimage">
+        <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
+        <label for="bannerUpload" class="btn btn-primary mt-3">Upload</label>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-5">
+      <h5>For Rent First Section</h5>
+      <div class="banner-head d-flex flex-column">
+        <div class="textareaSave">
+          <textarea name="" id="" rows="1" placeholder="Section Heading"></textarea>
+          <i class="fa fa-save"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-5">
+      <h5>For Rent Second Section</h5>
+      <div class="banner-head d-flex flex-column">
+        <div class="textareaSave">
+          <textarea name="" id="" rows="1" placeholder="Section Heading"></textarea>
+          <i class="fa fa-save"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-5">
+      <h5>For Rent Third Section</h5>
+      <div class="banner-head d-flex flex-column">
+        <div class="textareaSave">
+          <textarea name="" id="" rows="1" placeholder="Section Heading"></textarea>
+          <i class="fa fa-save"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-5">
+      <h5>For Rent Fourth Section</h5>
+      <div class="banner-head d-flex flex-column">
+        <div class="textareaSave">
+          <textarea name="" id="" rows="1" placeholder="Section Heading"></textarea>
+          <i class="fa fa-save"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

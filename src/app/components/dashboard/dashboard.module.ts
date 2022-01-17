@@ -11,10 +11,13 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
 import { AgmCoreModule } from '@agm/core';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { TotalUsersComponent } from './total-users/total-users.component';
+import { TotalRestaurantsComponent } from './total-restaurants/total-restaurants.component';
+import { PaymentNotificationsComponent } from './payment-notifications/payment-notifications.component';
 import { DefaultComponent } from './default/default.component';
 
 @NgModule({
-  declarations: [ DefaultComponent],
+  declarations: [TotalUsersComponent, TotalRestaurantsComponent, PaymentNotificationsComponent, DefaultComponent],
   imports: [
     CommonModule,
     ChartistModule,

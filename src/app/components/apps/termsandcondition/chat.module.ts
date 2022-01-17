@@ -5,7 +5,7 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { EmojiModule } from '@ctrl/ngx-emoji-mart/ngx-emoji';
 import { SharedModule } from '../../../shared/shared.module';
 import { ChatRoutingModule } from './chat-routing.module';
-
+import { CKEditorModule } from 'ngx-ckeditor';
 import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
@@ -17,7 +17,8 @@ import { ChatComponent } from './chat/chat.component';
     ChatRoutingModule,
     PickerModule,
     EmojiModule,
-    SharedModule
+    SharedModule,
+    CKEditorModule
   ]
 })
 export class ChatModule { }

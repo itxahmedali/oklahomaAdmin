@@ -1,47 +1,9 @@
-<app-breadcrumb [title]="'Terms And Condition'" [active_item]="'Terms And Condition'"></app-breadcrumb>
-<div class="row">
-    <div class="col-lg-12 mb-3">
-        <div class="default-accordion">
-            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                <ngb-panel title="Heading">
-                    <ng-template ngbPanelContent>
-                        <textarea name="" id="" rows="2"></textarea>
-                    </ng-template>
-                </ngb-panel>
-            </ngb-accordion>
-        </div>
+<app-breadcrumb [title]="'Terms Of Use'" [items]="[]" [active_item]="'Terms Of Use'"></app-breadcrumb>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 mt-5">
+      <h5>Terms Of Use</h5>
+      <ck-editor name="editor1" [(ngModel)]="ckEditor" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
     </div>
-    <div class="col-lg-12 mb-3">
-        <div class="default-accordion">
-            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                <ngb-panel title="Paragraph">
-                    <ng-template ngbPanelContent>
-                        <textarea name="" id="" rows="5"></textarea>
-                    </ng-template>
-                </ngb-panel>
-            </ngb-accordion>
-        </div>
-    </div>
-    <div class="col-lg-12 mb-3">
-        <div class="default-accordion">
-            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                <ngb-panel title="Heading">
-                    <ng-template ngbPanelContent>
-                        <textarea name="" id="" rows="2"></textarea>
-                    </ng-template>
-                </ngb-panel>
-            </ngb-accordion>
-        </div>
-    </div>
-    <div class="col-lg-12 mb-3">
-        <div class="default-accordion">
-            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                <ngb-panel title="Paragraph">
-                    <ng-template ngbPanelContent>
-                        <textarea name="" id="" rows="5"></textarea>
-                    </ng-template>
-                </ngb-panel>
-            </ngb-accordion>
-        </div>
-    </div>
+  </div>
 </div>

@@ -1,0 +1,95 @@
+.banner-sec {
+    width: 100%;
+
+    img {
+        border-radius: 15px;
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+    }
+}
+
+.home-content-sec,
+.home-banner-sec {
+    width: 100%;
+
+    img {
+        border-radius: 15px;
+        object-fit: cover;
+        width: 100%;
+        height: 150px;
+    }
+}
+
+.textareaSave {
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+}
+
+.textareaContentSave {
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 25px;
+        right: 10px;
+    }
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px 1rem;
+    background: none;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+}
+
+.fa.fa-save {
+    color: #757575;
+    cursor: pointer;
+}
+.downloadBanner {
+    width: 100%;
+
+    img {
+        border-radius: 15px;
+        object-fit: cover;
+        width: 100%;
+        height: 257px;
+
+    }
+}
+
+.about-icon-sec {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .fa-edit-pos {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        cursor: pointer;
+
+        i {
+            color: #bf983a;
+        }
+    }
+
+}
+
+.btn.btn-primary {
+    width: 30%;
+}

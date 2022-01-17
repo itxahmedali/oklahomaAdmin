@@ -7,8 +7,24 @@ export const content: Routes = [
     loadChildren: () => import('../../components/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
-    path: 'users',
-    loadChildren: () => import('../../components/apps/users/users.module').then(m => m.UsersModule)
+    path: 'home',
+    loadChildren: () => import('../../components/apps/home/file-manager.module').then(m => m.FileManagerModule)
+  },
+  {
+    path: 'forRent',
+    loadChildren: () => import('../../components/apps/forrent/users.module').then(m => m.UsersModule)
+  },
+  {
+    path: 'forBuy',
+    loadChildren: () => import('../../components/apps/forbuy/blog.module').then(m => m.BlogModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('../../components/apps/about/gallery.module').then(m => m.GalleryDemoModule)
+  },
+  {
+    path: 'news&articles',
+    loadChildren: () => import('../../components/apps/newsarticle/learning.module').then(m => m.LearningModule)
   },
   {
     path: 'termsandcondition',
@@ -16,11 +32,11 @@ export const content: Routes = [
   },
   {
     path: 'privacy',
-    loadChildren: () => import('../../components/apps/privacypolicy/email.module').then(m=>m.EmailModule)
+    loadChildren: () => import('../../components/apps/privacy/email.module').then(m => m.EmailModule)
   },
   {
-    path: 'allRestaurants',
-    loadChildren: () => import('../../components/apps/restaurants/file-manager.module').then(m=>m.FileManagerModule)
+    path: 'contactus',
+    loadChildren: () => import('../../components/apps/contact us/contacts.module').then(m => m.ContactsModule)
   },
   {
     path: 'settings',

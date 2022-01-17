@@ -1,7 +1,7 @@
 declare let require: any;
 let Knob = require('knob');
 
-let primary_color = localStorage.getItem('primary_color') || '#7366ff';
+let primary_color = localStorage.getItem('primary_color') || '#bf983a';
 
 export let tron = Knob({
     value: 29,

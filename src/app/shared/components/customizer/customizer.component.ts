@@ -16,7 +16,7 @@ export class CustomizerComponent implements OnInit {
   public sidebarSetting: string = 'default-sidebar';
   public MIXLayout: string = 'default';
 
-  public primary_color: string = '#7366ff';
+  public primary_color: string = '#bf983a';
   public secondary_color: string = '#f73164';
 
   constructor(private modalService: NgbModal,
@@ -75,11 +75,11 @@ export class CustomizerComponent implements OnInit {
   }
 
   resetColor() {
-    document.documentElement.style.setProperty('--theme-deafult', '#7366ff');
+    document.documentElement.style.setProperty('--theme-deafult', '#bf983a');
     document.documentElement.style.setProperty('--theme-secondary', '#f73164');
-    (<HTMLInputElement>document.getElementById('ColorPicker1')).value = '#7366ff';
+    (<HTMLInputElement>document.getElementById('ColorPicker1')).value = '#bf983a';
     (<HTMLInputElement>document.getElementById('ColorPicker2')).value = '#f73164';
-    this.layout.config.color.primary_color = '#7366ff';
+    this.layout.config.color.primary_color = '#bf983a';
     this.layout.config.color.secondary_color = '#f73164';
   }
 
