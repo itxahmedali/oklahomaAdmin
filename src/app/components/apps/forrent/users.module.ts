@@ -8,15 +8,12 @@ import { SharedModule } from '../../../shared/shared.module';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { TeamDetailsComponent } from './team-details/team-details.component';
-import { ProfileComponent } from './profile/profile.component';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 import 'hammerjs';
 import 'mousetrap';
-import { UserProfileComponent } from './profile/user-profile/user-profile.component';
 
 @NgModule({
-  declarations: [TeamDetailsComponent, ProfileComponent, EditProfileComponent, UserProfileComponent],
+  declarations: [TeamDetailsComponent],
   imports: [
     CommonModule,
     UsersRoutingModule,
