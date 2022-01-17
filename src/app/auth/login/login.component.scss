@@ -11,7 +11,9 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-
+.custom_header{
+  width: 60%;
+}
 @keyframes loader {
   15% {
     transform: translateX(0);
