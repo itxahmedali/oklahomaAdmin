@@ -1,19 +1,24 @@
 <app-breadcrumb [title]="'Contact Us'" [items]="[]" [active_item]="'Contact Us'"></app-breadcrumb>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12">
-      <h5>Banner Section</h5>
-      <div class="banner-head d-flex flex-column">
-        <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
-          <i class="fa fa-save"></i>
+  <form action="">
+    <div class="row">
+      <div class="col-lg-12">
+        <h5>Banner Section</h5>
+        <div class="banner-head d-flex flex-column">
+          <div class="textareaSave">
+            <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
+            
+          </div>
+        </div>
+        <div class="banner-sec mt-3 d-flex flex-column">
+          <img alt="" [src]="bannerimage">
+          <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
+          <label for="bannerUpload" class="btn btn-primary mt-3">Upload</label>
         </div>
       </div>
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="bannerimage">
-        <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
-        <label for="bannerUpload" class="btn btn-primary mt-3">Upload</label>
+      <div class="col-lg-12 mt-5 mb-3 d-flex justify-content-end">
+        <button class="btn btn-primary" type="submit">Save</button>
       </div>
     </div>
-  </div>
+  </form>
 </div>

@@ -7,19 +7,7 @@ const routes: Routes = [{
     {
       path: '',
       component: GalleryGridComponent
-    },
-    // {
-    //   path: 'gallery-desc',
-    //   component: GalleryDescComponent
-    // },
-    // {
-    //   path: 'mesonry',
-    //   component: MesonryComponent
-    // },
-    // {
-    //   path: 'hover',
-    //   component: HoverEffectComponent
-    // }
+    }
   ]
 }];
 

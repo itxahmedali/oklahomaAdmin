@@ -11,15 +11,7 @@ const routes: Routes = [
       {
         path:'',
         component:DetailsComponent
-      },
-      // {
-      //   path:'single',
-      //   component:SingleComponent
-      // },
-      // {
-      //   path:'add-post',
-      //   component:AddPostComponent
-      // }
+      }
     ]
   }
 ];

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-inner-article',
   templateUrl: './inner-article.component.html',
@@ -16,8 +16,20 @@ export class InnerArticleComponent implements OnInit {
     //Image upload validation
     var mimeType = event.target.files[0].type;
     if (mimeType.match(/image\/*/) == null) {
-      return;
-    } else {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Invalid file type',
+        icon: 'error',
+        confirmButtonText: 'Close',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+      return}
+       else {
       const reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
       reader.onload = (_event) => {

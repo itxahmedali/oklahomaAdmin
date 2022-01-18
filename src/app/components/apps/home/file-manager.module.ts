@@ -6,6 +6,7 @@ import { FileManagerRoutingModule } from './file-manager-routing.module';
 import { FileManagerComponent } from './file-manager.component';
 import { CountToModule } from 'angular-count-to';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import Swal from 'sweetalert2'
 @NgModule({
   imports: [
     CommonModule,
@@ -13,7 +14,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     FileManagerRoutingModule,
     NgxDatatableModule,
     NgApexchartsModule,
-    CountToModule
+    CountToModule,
   ],
   declarations: [FileManagerComponent]
 })

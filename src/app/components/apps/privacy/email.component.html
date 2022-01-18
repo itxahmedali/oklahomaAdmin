@@ -1,9 +1,14 @@
 <app-breadcrumb [title]="'Privacy Notice'" [items]="[]" [active_item]="'Privacy Notice'"></app-breadcrumb>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12 mt-5">
-      <h5>Privacy Notice</h5>
-      <ck-editor name="editor1" [(ngModel)]="ckEditor" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
+  <form action="">
+    <div class="row">
+      <div class="col-lg-12 mt-5">
+        <h5>Privacy Notice</h5>
+        <ck-editor name="editor1" [(ngModel)]="ckEditor" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
+      </div>
+      <div class="col-lg-12 mt-5 mb-3 d-flex justify-content-end">
+        <button class="btn btn-primary" type="submit">Save</button>
+      </div>
     </div>
-  </div>
+  </form>
 </div>
