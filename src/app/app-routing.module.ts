@@ -7,6 +7,7 @@ import { full } from "./shared/routes/full.routes";
 import { content } from "./shared/routes/routes";
 
 import { AdminGuard } from './shared/guard/admin.guard';
+import { ListComponent } from './components/apps/newsarticle/list/list.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,7 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: ''
-  }
+  },
 ];
 
 @NgModule({

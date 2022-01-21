@@ -1,0 +1,109 @@
+<app-breadcrumb [title]="'Get In Touch Users'" [items]="[]" [active_item]="'Get In Touch Users'"></app-breadcrumb>
+<div class="container-fluid">
+    <div class="users">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body custom-datatable">
+                        <div class="searchBox d-flex justify-content-between">
+                            <input type="text" class="filter-ngx form-control" placeholder='Search'
+                                (keyup)="updateFilter($event)" />
+                        </div>
+                        <ngx-datatable [rows]="company" class="material fullscreen bootstrap" [columnMode]="'standard'"
+                            [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [scrollbarH]="true" [limit]="5">
+                            <ngx-datatable-column name="Id" sortable="true" [width]="100">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.id}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Name" sortable="true" [width]="280">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.page_name}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Email" sortable="true" [width]="280">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.email}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <!-- <ngx-datatable-column name="Registration" sortable="true" [width]="280">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.registration}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Number" sortable="true" [width]="280">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.number}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Message" sortable="true" [width]="280">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.message}}
+                                </ng-template>
+                            </ngx-datatable-column> -->
+                            <ngx-datatable-column name="Actions" sortable="false" [width]="250">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    <div class="d-flex actionsBtn">
+                                        <button class="btn btn-primary" (click)="open(viewUser)">
+                                            <i class='{{row.editActions}}'></i>
+                                        </button>
+                                        <button class="btn btn-primary">
+                                            <i class='{{row.delActions}}'></i>
+                                        </button>
+                                    </div>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ngx-datatable>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- view user modal -->
+<ng-template #viewUser let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">User Info</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="row">
+                <div class="col-lg-6 mb-3 d-flex flex-column">
+                    <label for="">Name</label>
+                    <label for=""> <strong>John</strong> </label>
+                </div>
+                <div class="col-lg-6 mb-3 d-flex flex-column">
+                    <label for="">Registration</label>
+                    <label for=""> <strong>12/12/2021</strong> </label>
+                </div>
+                <div class="col-lg-6 mb-3 d-flex flex-column">
+                    <label for="">Email</label>
+                    <label for=""> <strong>John@gmail.com</strong> </label>
+                </div>
+                <div class="col-lg-6 mb-3 d-flex flex-column">
+                    <label for="">Number</label>
+                    <label for=""> <strong>123456789</strong> </label>
+                </div>
+                <div class="col-lg-12 mb-3 d-flex flex-column">
+                    <label for="">Message</label>
+                    <label for=""> <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur
+                            inventore eligendi iure nulla amet quam, voluptates omnis saepe autem voluptatibus esse
+                            eaque quo cupiditate corrupti vel maiores nam laboriosam?</strong> </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+</ng-template>

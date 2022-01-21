@@ -1,0 +1,14 @@
+.banner{
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-size: cover !important;
+    &::before {
+        background: #000000bf;
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}

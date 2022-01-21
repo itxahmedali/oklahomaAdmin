@@ -1,32 +1,29 @@
-<app-breadcrumb [title]="'News And Articles'" [items]="[]" [active_item]="'News And Articles'"></app-breadcrumb>
+<app-breadcrumb [title]="'News And Articles / Articles'" [items]="[]" [active_item]="'News And Articles / Articles'"></app-breadcrumb>
 <div class="container-fluid">
-    <form action="">
+    <div class="user-profile articlesList">
         <div class="row">
-            <div class="col-lg-12">
-                <h5>Banner Section</h5>
-                <div class="banner-head d-flex flex-column">
-                    <div class="textareaSave">
-                        <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
-                        
+            <div class="col-sm-12 col-lg-6" *ngFor="let article of articles">
+                <div class="actionBtn">
+                    <button class="btn btn-primary mt-3" routerLink="/news&articles_banner/article"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-primary mt-3"><i class="fa fa-trash"></i></button>
+                </div>
+                <div class="card hovercard">
+                    <div class="cardheader">
+                        <img src="{{article.img}}" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="row">
+                            <div class="col-lg-12 order-sm-0 order-xl-1">
+                                <div class="user-designation">
+                                    <div class="title"><a href="javascript:void(0)">{{article.title}}</a></div>
+                                    <div class="desc mt-2">{{article.description}}</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="banner-sec mt-3 d-flex flex-column">
-                    <img alt="" [src]="bannerimage">
-                    <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
-                    <label for="bannerUpload" class="btn btn-primary mt-3">Upload</label>
-                </div>
             </div>
-            <div class="col-lg-12 mt-3">
-                <div class="banner-head d-flex flex-column">
-                    <div class="textareaSave">
-                        <ck-editor name="editor1" [(ngModel)]="ckEditor" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 mt-5 mb-3 d-flex justify-content-end">
-                <button class="btn btn-primary" type="submit">Save</button>
-            </div>
+
         </div>
-    </form>
+    </div>
 </div>

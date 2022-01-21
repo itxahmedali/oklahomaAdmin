@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2'
 @Component({
   selector: 'app-gallery-grid',
@@ -7,17 +8,23 @@ import Swal from 'sweetalert2'
   encapsulation: ViewEncapsulation.None
 })
 export class GalleryGridComponent implements OnInit {
-
-
-  constructor() { }
-
+  Gettoknowus = 'https://designprosusa.com/oklahoma/assets/1x/aboutusSec.png';
+  reviwbanner1 = 'https://designprosusa.com/oklahoma/assets/SVG/aboutUsicon1.svg'
+  reviwbanner2 = 'https://designprosusa.com/oklahoma/assets/SVG/aboutUsicon2.svg'
+  reviwbanner3 = 'https://designprosusa.com/oklahoma/assets/SVG/aboutUsicon3.svg'
+  downloadbannerImage="assets/1x/banners/banner1.png"
+  downloadImage="assets/1x/banners/banner1.png"
+  playStoreSecImg = 'https://designprosusa.com/oklahoma/downloadbg.e39974ac2d80dfb20b83.png'
+  constructor(
+    private modalService: NgbModal,
+  ) { }
+  ngOnInit() { }
+  closeResult = '';
   bannerimage="assets/1x/banners/banner1.png"
   secondSec="assets/1x/banners/banner1.png"
   abouticonUpload1="assets/1x/banners/banner1.png"
   abouticonUpload2="assets/1x/banners/banner1.png"
   abouticonUpload3="assets/1x/banners/banner1.png"
-  downloadbannerImage="assets/1x/banners/banner1.png"
-  downloadImage="assets/1x/banners/banner1.png"
 
   //FileUpload
   readUrl(event: any, param) {
@@ -47,7 +54,24 @@ export class GalleryGridComponent implements OnInit {
       };
     }
   }
-  ngOnInit() { }
+  
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
 
 }
 

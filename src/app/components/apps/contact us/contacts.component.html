@@ -3,17 +3,18 @@
   <form action="">
     <div class="row">
       <div class="col-lg-12">
-        <h5>Banner Section</h5>
-        <div class="banner-head d-flex flex-column">
-          <div class="textareaSave">
-            <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
-            
-          </div>
-        </div>
-        <div class="banner-sec mt-3 d-flex flex-column">
-          <img alt="" [src]="bannerimage">
+        <div class="clipPath" style="background: url({{bannerimage}});background-size: cover;">
           <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
-          <label for="bannerUpload" class="btn btn-primary mt-3">Upload</label>
+          <label for="bannerUpload" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+      
+          <div class="Cliptext">
+            <div class="row">
+              <div class="col-lg-6">
+                <!-- <h1 (click)="open(content)">Find Your <span> Dream House </span> By Us <i class="fa fa-edit"></i></h1> -->
+                <h1 (click)="open(content)">Want to <span> Buy </span> your <span>Dream House</span>? <i class="fa fa-edit"></i></h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-lg-12 mt-5 mb-3 d-flex justify-content-end">
@@ -22,3 +23,29 @@
     </div>
   </form>
 </div>
+<!-- edit info modals -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Banner Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <label for="name">Home Banner Heading <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top"
+              title="If you want the word bold and gold kindly use single quotations ''. eg: 'Dream House'"></i>
+          </label>
+          <div class="input-group">
+            <input id="name" class="form-control" placeholder="Find Your Dream House By Us" name="name">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>

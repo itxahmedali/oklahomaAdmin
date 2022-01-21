@@ -1,23 +1,197 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets/scss/app.scss";
 
-.router-wrapper  {
-    position:  relative;
-    overflow:  hidden;
-    width:  100vw;
-    height:  calc(100%  -  47px);
-    perspective:  1200px;
-    transform-style:  preserve-3d;
+.router-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: calc(100% - 47px);
+    perspective: 1200px;
+    transform-style: preserve-3d;
 }
 
-:host  {
+:host {
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     background: #60d7a9;
 }
-  // dark theme
-  body .dark-only h6{
-    color:#fff !important;
+
+// dark theme
+body .dark-only h6 {
+    color: #fff !important;
+}
+
+// data table 
+// ::ng-deep .datatable-row-center.ng-star-inserted,
+// ::ng-deep .datatable-header-inner,
+// ::ng-deep .datatable-header.ng-star-inserted,
+// ::ng-deep .datatable-row-center.datatable-row-group.ng-star-inserted{
+//     width: 100% !important;
+// }
+// ::ng-deep .datatable-row-center.ng-star-inserted{
+//     display: flex !important;
+//     justify-content: space-between;
+// }
+.clipPath {
+    overflow: hidden;
+    position: relative;
+    height: 542px;
+    width: 100%;
+    background-size: cover !important;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 64.8%, 24% 89.8%, 22.2% 90%, 20.6% 89.8%, 19.1% 89%, 17.7% 87.8%, 0 73%);
+    clip-path: polygon(0 0, 100% 0, 100% 64.8%, 24% 89.8%, 22.2% 90%, 20.6% 89.8%, 19.1% 89%, 17.7% 87.8%, 0 73%);
+}
+
+.clipPath {
+    &::before {
+        background: #000000bf;
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+.uploadBtn {
+    position: absolute;
+    border-radius: 50px;
+    padding: 0 !important;
+    top: 10px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.uploadBtn.left {
+    left: 20px
+}
+
+.Cliptext {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 5%;
+
+    .row {
+        h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            font-family: 'Roboto';
+            font-size: 38px;
+
+            span {
+                font-family: 'Roboto';
+                color: #b48618;
+            }
+
+            i {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.fa-info-circle {
+    cursor: pointer;
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+.btn-slide-left {
+    border: 1px solid #000;
+    transition: all .5s ease-in-out;
+    background-color: #000;
+}
+
+.black-btn {
+    padding: 8px 2.3rem;
+    color: #fff;
+    background: #000;
+    border: none;
+    border-radius: 50px;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.boxess {
+    .box {
+        height: 190px;
+        width: 100%;
+        background-color: #e6d5ac;
+        border-radius: 10px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.iconsPlay a {
+    width: 100px;
+    height: -moz-fit-content;
+    height: fit-content;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.iconsPlay a:nth-child(2) {
+    margin-left: 10px;
+}
+
+.latest {
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    input {
+        text-align: center;
+        border: none;
+        cursor: text;
+        font-size: 34px;
+        color: #000;
+        background-color: transparent;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    i {
+        position: absolute;
+        color: #b48618;
+        right: 20px;
+        font-size: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+
+    .inputTypeButton {
+        text-align: center;
+        border: none;
+        cursor: text;
+        font-size: 34px;
+        color: #fff;
+        background-color: black;
+        width: 165px;
+        font-weight: bold;
+        font-size: 16px;
+        height: 44px;
+        border-radius: 50px;
+        margin-bottom: 2rem;
+    }
 }

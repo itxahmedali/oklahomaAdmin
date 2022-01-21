@@ -1,0 +1,48 @@
+<app-breadcrumb [title]="'Newsletter Users'" [items]="[]" [active_item]="'Newsletter Users'"></app-breadcrumb>
+<div class="container-fluid">
+    <div class="users">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body custom-datatable">
+                        <div class="searchBox d-flex justify-content-between">
+                            <input type="text" class="filter-ngx form-control" placeholder='Search'
+                                (keyup)="updateFilter($event)" />
+                        </div>
+                        <ngx-datatable [rows]="company" class="material fullscreen bootstrap" [columnMode]="'standard'"
+                            [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [scrollbarH]="true" [limit]="5">
+                            <ngx-datatable-column name="Id" sortable="true" [width]="100">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.id}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Email" sortable="true" [width]="280">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.email}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Registration" sortable="true" [width]="280">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    {{row.registration}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Actions" sortable="false" [width]="250">
+                                <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    <div class="d-flex actionsBtn">
+                                        <button class="btn btn-primary">
+                                            <i class='{{row.delActions}}'></i>
+                                        </button>
+                                    </div>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ngx-datatable>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

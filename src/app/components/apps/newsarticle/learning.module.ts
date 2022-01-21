@@ -7,8 +7,9 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { ListComponent } from './list/list.component';
 import { InnerArticleComponent } from './inner-article/inner-article.component';
 import { CKEditorModule } from 'ngx-ckeditor';
+import { ArticleComponent } from './article/article.component';
 @NgModule({
-  declarations: [ListComponent, InnerArticleComponent],
+  declarations: [ListComponent, InnerArticleComponent, ArticleComponent],
   imports: [
     CommonModule,
     LearningRoutingModule,

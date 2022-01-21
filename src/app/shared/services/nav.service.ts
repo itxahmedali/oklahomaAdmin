@@ -82,20 +82,10 @@ export class NavService implements OnDestroy {
 
   MENUITEMS: Menu[] = [
     {
-      path: "/dashboard",
-      title: "Dashboard",
-      type: "link",
-      active: true,
-    },
-    {
       path: "/home",
       title: "Home",
       type: "link",
-    },
-    {
-      path: "/forRent",
-      title: "For Rent",
-      type: "link",
+      active: true,
     },
     {
       path: "/forBuy",
@@ -103,14 +93,27 @@ export class NavService implements OnDestroy {
       type: "link",
     },
     {
+      path: "/forSell",
+      title: "For Sell",
+      type: "link",
+    },
+    // {
+    //   path: "/cms_management",
+    //   title: "CMS Management",
+    //   type: "link",
+    // },
+    {
       path: "/about",
       title: "About Us",
       type: "link",
     },
     {
-      path: "/news&articles",
       title: "News And Articles",
-      type: "link",
+      type: "sub",
+      children: [
+        { path: "/news&articles_banner", title: "Banner", type: "link" },
+        { path: "/news&articles_banner/innerArticle", title: "Articles", type: "link" },
+      ],
     },
     {
       path: "/privacy",
@@ -125,6 +128,26 @@ export class NavService implements OnDestroy {
     {
       path: "/contactus",
       title: "Contact Us",
+      type: "link",
+    },
+    {
+      path: "/users",
+      title: "Users",
+      type: "link",
+    },
+    {
+      path: "/contactususers",
+      title: "Contact Us Users",
+      type: "link",
+    },
+    {
+      path: "/gettoususers",
+      title: "Get In Touch Users",
+      type: "link",
+    },
+    {
+      path: "/newsletteruserModule",
+      title: "Newsletter Users",
       type: "link",
     },
     { path: "/settings", title: "Settings", type: "link" },

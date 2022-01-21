@@ -11,7 +11,7 @@ export const content: Routes = [
     loadChildren: () => import('../../components/apps/home/file-manager.module').then(m => m.FileManagerModule)
   },
   {
-    path: 'forRent',
+    path: 'cms_management',
     loadChildren: () => import('../../components/apps/forrent/users.module').then(m => m.UsersModule)
   },
   {
@@ -19,11 +19,15 @@ export const content: Routes = [
     loadChildren: () => import('../../components/apps/forbuy/blog.module').then(m => m.BlogModule)
   },
   {
+    path: 'forSell',
+    loadChildren: () => import('../../components/apps/forsell/blog.module').then(m => m.BlogModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('../../components/apps/about/gallery.module').then(m => m.GalleryDemoModule)
   },
   {
-    path: 'news&articles',
+    path: 'news&articles_banner',
     loadChildren: () => import('../../components/apps/newsarticle/learning.module').then(m => m.LearningModule)
   },
   {
@@ -41,5 +45,21 @@ export const content: Routes = [
   {
     path: 'settings',
     loadChildren: () => import('../../components/apps/settings/bookmarks.module').then(m => m.BookmarksModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('../../components/apps/users/chat.module').then(m => m.UserModule)
+  },
+  {
+    path: 'contactususers',
+    loadChildren: () => import('../../components/apps/contactususer/chat.module').then(m => m.contactususerModule)
+  },
+  {
+    path: 'gettoususers',
+    loadChildren: () => import('../../components/apps/gettoususer/chat.module').then(m => m.gettoususerModule)
+  },
+  {
+    path: 'newsletteruserModule',
+    loadChildren: () => import('../../components/apps/newsletterusers/chat.module').then(m => m.newsletteruserModule)
   }
 ];

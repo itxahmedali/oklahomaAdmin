@@ -1,17 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2'
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
+  closeResult = '';
   public isFindCourse: boolean = false;
   public isCategories: boolean = false;
   public isUpcomingCourses: boolean = false;
-  
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
   bannerimage="assets/1x/banners/banner1.png"
   articleThumbnail1="assets/1x/banners/banner1.png"
   articleThumbnail2="assets/1x/banners/banner1.png"

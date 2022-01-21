@@ -1,19 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
+  closeResult = '';
 
-
-  public history: boolean = false;
-  public editContact: boolean = false;
-
-  constructor() { }
+  constructor( private modalService: NgbModal, ) { }
   bannerimage="assets/1x/banners/banner1.png"
-
   //FileUpload
   readUrl(event: any, param) {
     if (event.target.files.length === 0)
@@ -44,9 +41,20 @@ export class ContactsComponent implements OnInit {
   }
   ngOnInit() {
   }
-
-  showHistory() {
-    this.history = !this.history;
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
   }
-
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
 }

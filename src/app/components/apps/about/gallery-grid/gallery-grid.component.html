@@ -1,140 +1,278 @@
 <app-breadcrumb [title]="'About Us'" [items]="[]" [active_item]="'About Us'"></app-breadcrumb>
 <div class="container-fluid">
-  <div class="about-pg">
-    <form action="">
+  <div class="clipPath" style="background: url({{bannerimage}});background-size: cover;">
+    <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
+    <label for="bannerUpload" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+    <div class="Cliptext">
       <div class="row">
-        <div class="col-lg-12">
-          <h5>Banner Section</h5>
-          <div class="banner-head d-flex flex-column">
-            <div class="textareaSave">
-              <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
-              
-            </div>
-          </div>
-          <div class="banner-sec mt-3 d-flex flex-column">
-            <img alt="" [src]="bannerimage">
-            <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
-            <label for="bannerUpload" class="btn btn-primary mt-3">Upload</label>
-          </div>
+        <div class="col-lg-6">
+          <h1 (click)="open(content)">About Us <i class="fa fa-edit"></i></h1>
         </div>
-        <div class="col-lg-12 mt-5">
-          <h5>About Us First Section</h5>
-          <div class="banner-head d-flex flex-column">
-            <div class="textareaSave">
-              <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
-              
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="abotusContainer mt3 d-flex">
+    <div class="getToknowImg ">
+      <input type="file" name="banner" id="secondImg" (change)="readUrl($event,'Gettoknowus')" hidden>
+      <label for="secondImg" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+      <img src="{{Gettoknowus}}" width="100%" height="100%" alt="">
+    </div>
+    <div class="aboutUsPara">
+      <label class="btn btn-primary mt-3 uploadBtn" (click)="open(DreamHouse)"><i class="fa fa-edit"></i></label>
+      <h3> Get to know us </h3>
+      <p> Lorem ipsum dolor sit amet,
+        consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+        laoreet dolore magna aliquam erat volutpat.
+        Ut wisi enim ad minim veniam, quis nostrud exerci tation
+        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate
+        velit esse molestie consequat, vel illum dolore eu feugiat
+        nulla facilisis at vero eros et accumsan et iusto odio
+        dignissim qui blandit praesent luptatum zzril delenit
+        augue duis dolore te feugait nulla facilisi.
+        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit
+        , sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+        magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+        quis nostrud exerci tation ullamcorper suscipit lobortis
+        nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+        consectetuer adipiscing elit, sed diam </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="ourMissionContainer mt5 position-relative">
+    <label class="btn btn-primary mt-3 uploadBtn" (click)="open(mission)"><i class="fa fa-edit"></i></label>
+    <div class="missionHeader">
+      <h1> Our Mission </h1>
+    </div>
+    <div class="ourMissonPara">
+      <strong>
+        <em>
+          <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+            laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+            hendrerit in vulputate velit esse molestie consequat, vel illum dolore. </p>
+        </em>
+      </strong>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="review-banner mt5 mb3 wow fadeInUp">
+    <div class="container">
+      <div class="review-banner d-flex align-items-center justify-content-between">
+        <div class="reviewsbox1">
+          <label class="btn btn-primary mt-3 uploadBtn" (click)="open(whyus)"><i class="fa fa-edit"></i></label>
+          <h1> Why Choose Us? </h1>
         </div>
-        <div class="col-lg-12 mt-5">
-          <h5>About Us Second Section</h5>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="home-content-sec d-flex flex-column">
-                <img alt="" [src]="secondSec">
-                <input type="file" name="banner" id="homesec1Upload" (change)="readUrl($event,'secondSec')" hidden>
-                <label for="homesec1Upload" class="btn btn-primary mt-3">Upload</label>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="banner-head d-flex flex-column">
-                <div class="textareaSave">
-                  <textarea name="" id="" rows="1" placeholder="Section Heading"></textarea>
-                  
-                </div>
-                <div class="textareaContentSave">
-                  <textarea class="mt-3" name="" id="" rows="7" placeholder="Section Content"></textarea>
-                  
-                </div>
-              </div>
-            </div>
+        <div class="reviewsbox2">
+          <div class="iconimagebox">
+            <input type="file" name="banner" id="review1" (change)="readUrl($event,'reviwbanner1')" hidden>
+            <label for="review1" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+            <img src="{{reviwbanner1}}" width="100%" height="100%" alt="">
           </div>
+          <p> Wide Range Of <br> Properties </p>
         </div>
-         <div class="col-lg-12 mt-5">
-          <h5>About Us Third Section</h5>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="banner-head d-flex flex-column">
-                <div class="textareaSave">
-                  <textarea name="" id="" rows="1" placeholder="Section Heading"></textarea>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="about-icon-sec d-flex flex-column align-items-center">
-                <img alt="" [src]="abouticonUpload1">
-                <input type="file" name="banner" id="abouticonUpload1" (change)="readUrl($event,'abouticonUpload1')" hidden>
-                <label for="abouticonUpload1" class="fa-edit-pos">
-                  <i class="fa fa-edit"></i>
-                </label>
-              </div>
-              <div class="textareaSave mt-2">
-                <textarea name="" id="" rows="1" placeholder="Icon Content"></textarea>
-                
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="about-icon-sec d-flex flex-column align-items-center">
-                <img alt="" [src]="abouticonUpload2">
-                <input type="file" name="banner" id="abouticonUpload2" (change)="readUrl($event,'abouticonUpload2')" hidden>
-                <label for="abouticonUpload2" class="fa-edit-pos">
-                  <i class="fa fa-edit"></i>
-                </label>
-              </div>
-              <div class="textareaSave mt-2">
-                <textarea name="" id="" rows="1" placeholder="Icon Content"></textarea>
-                
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="about-icon-sec d-flex flex-column align-items-center">
-                <img alt="" [src]="abouticonUpload3">
-                <input type="file" name="banner" id="abouticonUpload3" (change)="readUrl($event,'abouticonUpload3')" hidden>
-                <label for="abouticonUpload3" class="fa-edit-pos">
-                  <i class="fa fa-edit"></i>
-                </label>
-              </div>
-              <div class="textareaSave mt-2">
-                <textarea name="" id="" rows="1" placeholder="Icon Content"></textarea>
-                
-              </div>
-            </div>
+        <div class="reviewsbox2">
+          <div class="iconimagebox">
+            <input type="file" name="banner" id="review2" (change)="readUrl($event,'reviwbanner2')" hidden>
+            <label for="review2" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+            <img src="{{reviwbanner2}}" width="100%" height="100%" alt="">
           </div>
+          <p> Customer Oriented </p>
         </div>
-        <div class="col-lg-12 mt-5">
-          <h5>About Us Download Section</h5>
-          <div class="row">
-            <div class="col-lg-6">
-              <label for="">Download Banner</label>
-              <div class="downloadBanner d-flex flex-column">
-                <img alt="" [src]="downloadbannerImage">
-                <input type="file" name="banner" id="homeDownloadBannerUpload"
-                  (change)="readUrl($event,'downloadbannerImage')" hidden>
-                <label for="homeDownloadBannerUpload" class="btn btn-primary mt-3">Upload</label>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="banner-head d-flex flex-column">
-                <div class="textareaContentSave">
-                  <textarea class="mt-3" name="" id="" rows="3" placeholder="Section Content"></textarea>
-                  
-                </div>
-              </div>
-              <label for="">Download Image</label>
-              <div class="home-banner-sec d-flex flex-column">
-                <img alt="" [src]="downloadImage">
-                <input type="file" name="banner" id="homeDownloadImageUpload" (change)="readUrl($event,'downloadImage')"
-                  hidden>
-                <label for="homeDownloadImageUpload" class="btn btn-primary mt-3">Upload</label>
-              </div>
+        <div class="reviewsbox2">
+          <div class="iconimagebox">
+            <input type="file" name="banner" id="review3" (change)="readUrl($event,'reviwbanner3')" hidden>
+            <label for="review3" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+            <img src="{{reviwbanner3}}" width="100%" height="100%" alt="">
+          </div>
+          <p> Decision Maker </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="download-section position-relative" style="background: url({{playStoreSecImg}});">
+    <input type="file" name="banner" id="playStoreSec" (change)="readUrl($event,'playStoreSecImg')" hidden>
+    <label for="playStoreSec" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="head d-flex align-items-center position-relative">
+            <label class="btn btn-primary mt-3 uploadBtn" style="right:6rem" (click)="open(DownloadModal)"><i
+                class="fa fa-edit"></i></label>
+            <h1>Download</h1>
+            <img src="	https://designprosusa.com/oklahoma/assets/SVG/logo2.svg" alt="">
+          </div>
+          <h4>Use Our App For Buy And Rent <br> Property Faster</h4>
+          <div class="download-icons">
+            <label for="">Available on</label>
+            <div class="iconsPlay d-flex">
+              <a href="javascript:void(0)">
+                <img src="https://designprosusa.com/oklahoma/assets/1x/playstore.png" alt="">
+              </a>
+              <a href="javascript:void(0)">
+                <img src="	https://designprosusa.com/oklahoma/assets/1x/appstore.png" alt="">
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-lg-12 mt-5 mb-3 d-flex justify-content-end">
-          <button class="btn btn-primary" type="submit">Save</button>
+        <div class="col-lg-6">
+          <div class="img-box">
+            <img src="	https://designprosusa.com/oklahoma/assets/1x/downloadprop.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- banner modal -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Banner Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <label for="name">Home Banner Heading <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top"
+              title="If you want the word bold and gold kindly use single quotations ''. eg: 'Dream House'"></i>
+          </label>
+          <div class="input-group">
+            <input  class="form-control" placeholder="About Us" name="name">
+          </div>
         </div>
       </div>
     </form>
   </div>
-</div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+<!-- Get to Know us modal -->
+<ng-template #DreamHouse let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Dream House Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <label for="name">Main Heading</label>
+          <div class="input-group">
+            <input  class="form-control" placeholder="Want To Buy Your" name="name">
+          </div>
+        </div>
+        <div class="col-lg-12 mt-3">
+          <label for="name">Paragraph</label>
+          <div class="input-group">
+            <textarea name="" id="" cols="30" rows="4" class="form-control"
+              placeholder="Lorem ipsum dolor ..."></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+<!-- Dream House modal -->
+<ng-template #mission let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Our Mission Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <label for="name">Main Heading</label>
+          <div class="input-group">
+            <input  class="form-control" placeholder="Our Mission" name="name">
+          </div>
+        </div>
+        <div class="col-lg-12 mt-3">
+          <label for="name">Paragraph</label>
+          <div class="input-group">
+            <textarea name="" id="" cols="30" rows="4" class="form-control"
+              placeholder="Lorem ipsum dolor ..."></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+<!-- why us -->
+<ng-template #whyus let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Why Choose Us Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <label for="name">Main Heading</label>
+          <div class="input-group">
+            <input  class="form-control" placeholder="Why Choose Us" name="name">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+<!-- Download modal -->
+<ng-template #DownloadModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Download Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <label for="name">Main Heading</label>
+          <div class="input-group">
+            <input  class="form-control" placeholder="Download" name="name">
+          </div>
+        </div>
+        <div class="col-lg-12 mt-3">
+          <label for="name">Sub Heading</label>
+          <div class="input-group">
+            <input  class="form-control" placeholder="Use Our App For Buy And Rent Property Faster"
+              name="name">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>

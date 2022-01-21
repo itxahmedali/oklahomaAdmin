@@ -21,18 +21,18 @@
           <span class="header-search" (click)="searchToggle()">
           </span>
         </li>
-        <li class="onhover-dropdown">
+        <!-- <li class="onhover-dropdown">
           <app-notification></app-notification>
-        </li>
+        </li> -->
         <li>
           <div class="mode" (click)="layoutToggle()">
             <i class="fa fa-moon-o" *ngIf="!dark"></i>
             <i class="fa fa-lightbulb-o" *ngIf="dark"></i>
           </div>
         </li>
-        <li class="onhover-dropdown">
+        <!-- <li class="onhover-dropdown">
           <app-message-box></app-message-box>
-        </li>
+        </li> -->
         <li class="maximize">
           <a class="text-dark" href="javascript:void(0)" (click)="toggleFullScreen()">
             <app-feather-icons [icon]="'maximize'"></app-feather-icons>

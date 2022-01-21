@@ -1,99 +1,41 @@
-<app-breadcrumb [title]="'News And Articles'" [items]="[]" [active_item]="'News And Articles'"></app-breadcrumb>
+<app-breadcrumb [title]="'News And Articles / Banner'" [items]="[]" [active_item]="'News And Articles / Banner'"></app-breadcrumb>
 <div class="container-fluid">
-  <div class="row mb-3">
-    <div class="col-lg-12">
-      <h5>Banner Section</h5>
-      <div class="banner-head d-flex flex-column">
-        <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Banner Heading"></textarea>
-          <i class="fa fa-save"></i>
+  <div class="clipPath" style="background: url({{bannerimage}});background-size: cover;">
+    <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
+    <label for="bannerUpload" class="btn btn-primary mt-3 uploadBtn"><i class="fa fa-edit"></i></label>
+    <div class="Cliptext">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 (click)="open(content)">News And Articles <i class="fa fa-edit"></i></h1>
         </div>
       </div>
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="bannerimage">
-        <input type="file" name="banner" id="bannerUpload" (change)="readUrl($event,'bannerimage')" hidden>
-        <label for="bannerUpload" class="btn btn-primary mt-3">Upload</label>
-      </div>
-    </div>
-    </div>
-    <h5>Aricles</h5>
-    <div class="row mt-3">
-    <div class="col-lg-4">
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="articleThumbnail1" routerLink="innerArticle">
-        <input type="file" name="banner" id="articleThumbnail1" (change)="readUrl($event,'articleThumbnail1')" hidden>
-        <label for="articleThumbnail1" class="btn btn-primary mt-3">Upload</label>
-      </div>
-      <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Article Heading"></textarea>
-          <i class="fa fa-save"></i>
-        </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="articleThumbnail2" routerLink="innerArticle">
-        <input type="file" name="banner" id="articleThumbnail2" (change)="readUrl($event,'articleThumbnail2')" hidden>
-        <label for="articleThumbnail2" class="btn btn-primary mt-3">Upload</label>
-      </div>
-      <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Article Heading"></textarea>
-          <i class="fa fa-save"></i>
-        </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="articleThumbnail3" routerLink="innerArticle">
-        <input type="file" name="banner" id="articleThumbnail3" (change)="readUrl($event,'articleThumbnail3')" hidden>
-        <label for="articleThumbnail3" class="btn btn-primary mt-3">Upload</label>
-      </div>
-      <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Article Heading"></textarea>
-          <i class="fa fa-save"></i>
-        </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="articleThumbnail4" routerLink="innerArticle">
-        <input type="file" name="banner" id="articleThumbnail4" (change)="readUrl($event,'articleThumbnail4')" hidden>
-        <label for="articleThumbnail4" class="btn btn-primary mt-3">Upload</label>
-      </div>
-      <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Article Heading"></textarea>
-          <i class="fa fa-save"></i>
-        </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="articleThumbnail5" routerLink="innerArticle">
-        <input type="file" name="banner" id="articleThumbnail5" (change)="readUrl($event,'articleThumbnail5')" hidden>
-        <label for="articleThumbnail5" class="btn btn-primary mt-3">Upload</label>
-      </div>
-      <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Article Heading"></textarea>
-          <i class="fa fa-save"></i>
-        </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="articleThumbnail6" routerLink="innerArticle">
-        <input type="file" name="banner" id="articleThumbnail6" (change)="readUrl($event,'articleThumbnail6')" hidden>
-        <label for="articleThumbnail6" class="btn btn-primary mt-3">Upload</label>
-      </div>
-      <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Article Heading"></textarea>
-          <i class="fa fa-save"></i>
-        </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="banner-sec mt-3 d-flex flex-column">
-        <img alt="" [src]="articleThumbnail7" routerLink="innerArticle">
-        <input type="file" name="banner" id="articleThumbnail7" (change)="readUrl($event,'articleThumbnail7')" hidden>
-        <label for="articleThumbnail7" class="btn btn-primary mt-3">Upload</label>
-      </div>
-      <div class="textareaSave">
-          <textarea name="" id="" rows="1" placeholder="Article Heading"></textarea>
-          <i class="fa fa-save"></i>
-        </div>
     </div>
   </div>
 </div>
+
+<!-- banner modal -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Banner Section</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <label for="name">Home Banner Heading <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top"
+              title="If you want the word bold and gold kindly use single quotations ''. eg: 'Dream House'"></i>
+          </label>
+          <div class="input-group">
+            <input id="name" class="form-control" placeholder="About Us" name="name">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>

@@ -74,7 +74,7 @@ table{
     padding:8px;
     margin-bottom: 30px;
     border: 1px solid $light-semi-gray;
-    width:30%;
+    width:100%;
     color: $light-text;
     &::placeholder {
       color: $light-text;
@@ -112,7 +112,7 @@ table{
     .datatable-checkbox {
       margin-bottom: 0;
       input {
-        width: auto;
+        width: 100%;
         margin-bottom: 0;
       }
     }
@@ -194,7 +194,7 @@ table{
       }
     }
     .datatable-body-row, .datatable-row-center, .datatable-header-inner {
-      display: -webkit-box !important;
+      display: -webkit-box;
     }
     .datatable-footer {
       .datatable-pager {

@@ -1,0 +1,61 @@
+.actionsBtn{
+    button{
+        margin: 0 5px;
+    }
+}
+.users{
+    position: relative;
+    .addBtn{
+        position: absolute;
+        top:10px;
+        right:10px;
+        z-index: 10;
+        background: none;
+        border:none;
+
+        i{
+            color: #bf983a;
+            font-size: 20px;
+        }
+    }
+}
+// pagination
+::ng-deep .custom-datatable .ngx-datatable.bootstrap .datatable-header{
+    width: 100% !important;
+}
+::ng-deep .datatable-header-inner{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+
+}
+::ng-deep .datatable-row-wrapper {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+::ng-deep .datatable-body {
+    width: 100% !important;
+}
+
+::ng-deep .datatable-body-row {
+    width: 100% !important;
+}
+
+::ng-deep .datatable-scroll.ng-star-inserted {
+    width: 100% !important;
+}
+::ng-deep datatable-body-row{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+::ng-deep datatable-header{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.modal-body{
+    input{
+    //     padding: 5px 10px;
+    // border-radius: 3px;
+    // border: 1px solid #000;
+    }
+}

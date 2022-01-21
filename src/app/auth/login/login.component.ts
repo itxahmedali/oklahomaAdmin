@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   login() {
     // this.authService.SignIn(this.loginForm.value['email'], this.loginForm.value['password']);
     if(this.loginForm.value['email'] == "test@gmail.com" && this.loginForm.value['password']=="test123"){
-      this.route.navigate(['/dashboard']);
+      this.route.navigate(['/home']);
     }
     else{
       Swal.fire({
